@@ -1,0 +1,4 @@
+replace hardcoded values for barcodes with input from file
+add changeable fuzzy parameter for input
+add parallelization
+
