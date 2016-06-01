@@ -92,8 +92,13 @@ for seq_rec in record_iterator :
 #sort scores
  sortedlist =sorted(valpairs.items(), key=itemgetter(1))
 #write line to groupfile
- if sortedlist[0][1] != "NA":
-  out.write(seq_rec.id+"\t"+sortedlist[0][0]+"\n")
+ if sortedlist[0][1] == "NA":
+  out.write(seq_rec.id+"\t"+"Nomatch"+"\n")
+ else:  
+  if sortedlist[0][1]==sortedlist[1][1]:
+   out.write(seq_rec.id+"\t"+"Ambig"+"\n")
+  else:
+   out.write(seq_rec.id+"\t"+sortedlist[0][0]+"\n")
  
 
 #close group file handle
