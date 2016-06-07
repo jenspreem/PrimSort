@@ -1,4 +1,6 @@
 replace hardcoded values for barcodes with input from file -- done
 add changeable fuzzy parameter for input  -done
 add parallelization --done
+add option for single primers/oligos in oligo-files
+add switch for - strand? so it would be optional not always included?
 
